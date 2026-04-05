@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Monolith Glitch</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #ccc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a { color: #a78bfa; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        header a { color: #888; font-size: 0.85rem; }
+        .content {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+            text-align: center;
+        }
+        .content h1 {
+            font-size: 1.6rem;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        .content p {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #161616;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 16px 28px;
+            font-size: 1rem;
+            color: #a78bfa;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .email-link:hover {
+            border-color: #a78bfa;
+            background: #1a1a2e;
+            text-decoration: none;
+        }
+        .email-link .icon {
+            font-size: 1.2rem;
+        }
+        .business-info {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 32px 20px;
+            color: #555;
+            font-size: 0.8rem;
+        }
+        footer .links { margin-bottom: 8px; }
+        footer .links a { margin: 0 8px; color: #777; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/">&larr; Back to Monolith Glitch</a>
+    </header>
+
+    <div class="content">
+        <h1>Get in touch</h1>
+        <p>Have a question, feature request, or need support with Giforia? We'd love to hear from you.</p>
+
+        <a href="mailto:monolith.glitch@gmail.com" class="email-link">
+            <span class="icon">✉</span>
+            <span>monolith.glitch@gmail.com</span>
+        </a>
+
+        <div class="business-info">
+            Monolith Glitch<br>
+            ABN 25 124 113 942
+        </div>
+    </div>
+
+    <footer>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/giforia-privacy-policy">Privacy Policy</a>
+        </div>
+        <p>&copy; 2025 Monolith Glitch. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -81,56 +81,6 @@
             opacity: 0.85;
             text-decoration: none;
         }
-        .contact-section {
-            max-width: 480px;
-            margin: 0 auto 40px;
-            padding: 0 20px;
-        }
-        .contact-section h3 {
-            font-size: 1.1rem;
-            color: #fff;
-            margin-bottom: 16px;
-            text-align: center;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        input, textarea {
-            background: #161616;
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 12px 14px;
-            font-size: 0.9rem;
-            color: #e0e0e0;
-            font-family: inherit;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        input:focus, textarea:focus {
-            border-color: #a78bfa;
-        }
-        textarea { resize: vertical; min-height: 100px; }
-        button[type="submit"] {
-            background: #a78bfa;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 12px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        button[type="submit"]:hover { background: #8b5cf6; }
-        .success-msg {
-            display: none;
-            text-align: center;
-            color: #4ade80;
-            padding: 16px;
-            font-size: 0.95rem;
-        }
         footer {
             margin-top: auto;
             text-align: center;
@@ -162,41 +112,12 @@
         </a>
     </div>
 
-    <div class="contact-section">
-        <h3>Get in touch</h3>
-        <form id="contact-form" action="https://formspree.io/f/FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Your name" required>
-            <input type="email" name="email" placeholder="Your email" required>
-            <textarea name="message" placeholder="Your message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <div class="success-msg" id="success-msg">Thanks! Your message has been sent.</div>
-    </div>
-
     <footer>
         <div class="links">
             <a href="/giforia-privacy-policy">Privacy Policy</a>
+            <a href="/contact">Contact</a>
         </div>
         <p>&copy; 2025 Monolith Glitch. All rights reserved.</p>
     </footer>
-
-    <script>
-        const form = document.getElementById('contact-form');
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const data = new FormData(form);
-            try {
-                await fetch(form.action, {
-                    method: 'POST',
-                    body: data,
-                    headers: { 'Accept': 'application/json' }
-                });
-                form.style.display = 'none';
-                document.getElementById('success-msg').style.display = 'block';
-            } catch (err) {
-                alert('Something went wrong. Please try again.');
-            }
-        });
-    </script>
 </body>
 </html>
